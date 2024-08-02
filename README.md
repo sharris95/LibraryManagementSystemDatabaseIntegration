@@ -1,0 +1,2 @@
+# LibraryManagementSystemDatabaseIntegration
+Library Management System with Database Integration Mini-Project
