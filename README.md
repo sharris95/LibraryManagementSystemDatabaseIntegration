@@ -1,5 +1,3 @@
-README
-
 Library Management System with Database Integration
 
 Overview
