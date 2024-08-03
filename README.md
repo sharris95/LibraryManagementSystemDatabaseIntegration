@@ -1,9 +1,13 @@
 README
+
 Library Management System with Database Integration
+
 Overview
+
 This project is a Library Management System that integrates with a MySQL database. It allows users to manage books, authors, genres, and users, as well as borrow and return books. The system is built using Python and follows object-oriented programming principles.
 
 Features
+
 Book Management: Add, view, borrow, and return books.
 User Management: Add and view users.
 Author Management: Add and view authors.
