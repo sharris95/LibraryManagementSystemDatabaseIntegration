@@ -1,64 +1,62 @@
-LibraryManagementSystemDatabaseIntegration Mini-Project
-
-
+README
+Library Management System with Database Integration
 Overview
-The LibraryMGMTapp is a Python-based command-line application designed for managing a library system. It integrates with a MySQL database to manage books, users, authors, and genres. This project builds upon foundational knowledge from Python Object-Oriented Programming (OOP) concepts, extending it with database integration.
+This project is a Library Management System that integrates with a MySQL database. It allows users to manage books, authors, genres, and users, as well as borrow and return books. The system is built using Python and follows object-oriented programming principles.
 
-Setup Instructions
-1. Clone the Repository
-First, clone the repository to your local machine:
+Features
+Book Management: Add, view, borrow, and return books.
+User Management: Add and view users.
+Author Management: Add and view authors.
+Genre Management: Add and view genres.
+Database Integration: Uses MySQL to store and manage data.
+Setup
+Prerequisites
+Python 3.x
+MySQL
+Installation
+Clone the repository:
 
-bash
-Copy code
-git clone https://github.com/your_username/LibraryMGMTapp.git
+
+git clone https://github.com/sharris95/LibraryMGMTapp.git
 cd LibraryMGMTapp
-2. Set Up the MySQL Database
-Before running the application, ensure you have MySQL installed and set up on your system.
+Create and activate a virtual environment:
 
-Create the Database and Tables:
 
-Open MySQL Workbench or any MySQL client.
-Create a new database named LibraryDB.
-Run the SQL scripts provided in the sql_scripts folder to create the necessary tables (books, users, authors, genres, and borrowed_books).
-Update Database Configuration:
-
-Replace the placeholder your_username and your_password in the create_connection() function with your MySQL credentials.
-3. Create and Activate a Virtual Environment
-Create a virtual environment to manage dependencies:
-
-bash
-Copy code
 python3 -m venv flask_stage_venv
-source flask_stage_venv/bin/activate  # On Windows, use `flask_stage_venv\Scripts\activate`
-4. Install Required Packages
-Install the required Python packages using pip:
+source flask_stage_venv/bin/activate  # On Windows use `flask_stage_venv\Scripts\activate`
+Install the required packages:
 
-bash
-Copy code
-pip install mysql-connector-python
+
+pip install -r requirements.txt
+Set up the MySQL database:
+
+Ensure MySQL is installed and running on your machine.
+Refer to your specified folder containing the SQL scripts you created to set up the database schema, such as creating tables for books, users, authors, genres, and borrowed_books.
+Execute these scripts using a MySQL client or the MySQL command line.
 Running the Application
-To start the Library Management System, run the following command:
+Run the application:
 
-bash
-Copy code
-python main.py
-Follow the on-screen instructions to navigate through the menu and manage books, users, authors, and genres.
 
-Main Features
-Book Operations
-Add a New Book: Allows you to add a book to the database.
-Borrow a Book: Mark a book as borrowed by a user.
-Return a Book: Return a previously borrowed book.
-Display All Books: List all books in the library along with their availability status.
-User Operations
-Add a New User: Register a new user in the system.
-Display All Users: List all registered users.
-Author Operations
-Add a New Author: Add new authors to the system.
-Display All Authors: List all authors.
-Genre Operations
-Add a New Genre: Add new genres to the system.
-Display All Genres: List all genres.
+python app.py
+Using the application:
+
+Follow the on-screen instructions to navigate through the menus and manage books, users, authors, and genres.
+Code Structure
+app.py: Main application file containing the LibraryManagementSystem class and main menu.
+models.py: Contains class definitions for Book, User, Author, and Genre.
+database.py: Handles database connection and operations.
 Important Notes
-Database Integration: The application uses MySQL for storing data. Make sure the database server is running and accessible.
-Error Handling: The application includes basic error handling for database operations and user inputs.
+Database Credentials: Ensure to replace the placeholder database credentials (your_username and your_password) with your actual MySQL credentials in the create_connection function.
+Data Persistence: The system stores data in a MySQL database, ensuring persistence across sessions.
+Future Enhancements
+User Authentication: Implement a user login system for enhanced security.
+Due Dates and Fines: Add functionality to manage due dates for borrowed books and calculate fines for overdue books.
+Contributing
+Feel free to fork this repository, create a branch, and submit a pull request for any improvements or additional features you would like to see.
+
+License
+This project is open-source and available under the MIT License.
+
+Acknowledgements
+This project is part of a coding bootcamp curriculum and serves as a practical exercise in integrating Python with databases.
+
